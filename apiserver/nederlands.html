@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Evision</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- Bootstrap CDN-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+ 
+  <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+</head>
+<body>
+  <div class="container">
+    <br>
+    <!-- Jumbotron Title -->
+    <div class="jumbotron">
+      <h1 class="text-center">Making your life easier</h1>
+      <h3 class="text-center">"In The Netherlands"</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3 class="text-center"><strong>Debit Card</strong>: Credit Card</h3>
+          </div>
+        </div>
+      </div>
+    </div>x
+    <!-- Current Product -->
+    <div class="float-left">Credit Card</div><br>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-2">
+                <img class="img-responsive thumbnail center-block" height="150px" width="150px" src="http://graphitepublications.com/wp-content/uploads/2015/04/5-Coding-Challenges-to-Help-You-Train-Your-Brain.jpg" alt="Coding Brain">
+              </div>
+              <div class="col-sm-6">
+                <h3 class=""><strong>Add Credit Card Information:</strong> <span id="highest-bidder"></span></h3>
+                <h3 class=""><strong>Current Price:</strong> <span id="highest-price"></span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="credit-card">
+  <div class="form-header">
+    <h4 class="title">Credit card detail</h4>
+  </div>
+ 
+  <div class="form-body">
+    <!-- Card Number -->
+    <input type="text" class="card-number" placeholder="Card Number">
+ 
+    <!-- Date Field -->
+    <div class="date-field">
+      <div class="month">
+        <select name="Month">
+          <option value="january">January</option>
+          <option value="february">February</option>
+          <option value="march">March</option>
+          <option value="april">April</option>
+          <option value="may">May</option>
+          <option value="june">June</option>
+          <option value="july">July</option>
+          <option value="august">August</option>
+          <option value="september">September</option>
+          <option value="october">October</option>
+          <option value="november">November</option>
+          <option value="december">December</option>
+        </select>
+      </div>
+      <div class="year">
+        <select name="Year">
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+        </select>
+      </div>
+    </div>
+ 
+    <!-- Card Verification Field -->
+    <div class="card-verification">
+      <div class="cvv-input">
+        <input type="text" placeholder="CVV">
+      </div>
+      <div class="cvv-details">
+        <p>3 or 4 digits usually found <br> on the signature strip</p>
+      </div>
+    </div>
+ 
+    <!-- Buttons -->
+    <button type="submit" class="proceed-btn"><a href="#">Proceed</a></button>
+    <button type="submit" class="paypal-btn"><a href="#">Pay With</a></button>
+  </div>
+</form>
+    <!-- Make Your Bid -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">How much</h3>
+          </div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="bidder-name">Your Name</label>
+                <input class="form-control" id="bidder-name" type="text">
+              </div>
+              <div class="form-group">
+                <label for="bidder-price">Your Price</label>
+                <input class="form-control" id="bidder-price" type="number">
+              </div>
+              <button class="btn btn-primary" id="submit-bid" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript -->
+  <script src="frontendwork.js"></script>
+</body>
+</html>
